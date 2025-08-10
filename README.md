@@ -51,8 +51,8 @@ Please refer here for project roadmap : https://github.com/ComodoSecurity/opened
 
 Please take a look at the following documents.
 
-1. [Getting Started]
-# Installation Instructions
+
+# Installation 
 OpenEDR is a single agent that can be installed on Windows endpoints. It generates extensible telemetry data for overall security-relevant events. It also uses file lookup, analysis, and verdict systems from Comodo, https://valkyrie.comodo.com/. You can also have your own account and free license there.
 
 The telemetry data is stored locally on the endpoint itself. You can use any log streaming solution and analysis platform. Here we will present, how can you do remote streaming and analysis via open source tools like Elasticsearch ELK and Filebeat.
@@ -103,7 +103,6 @@ We used these given technologies for an even simpler solution for example and yo
 [Setting Up Kibana](SettingKibana.md)
 
 
-2. [Build Instructions](getting-started/BuildInstructions.md)
 
 # Build Instructions
 You should have Microsoft Visual Studio 2019 to build the code
@@ -154,7 +153,7 @@ As a default You should have these libraries in you Visual Studio 2019 but these
 
  
 
-4. [Setting up Elasticsearch Kibana and Logstash](getting-started/SettingELK.md)
+
 
 ### Setting up Elasticsearch Kibana and Logstash
 
@@ -187,7 +186,7 @@ sudo docker ps
      Password : changeme
 
 
-5. [Setting up Openedr and File beat](getting-started/SettingFileBeat.md)
+
 
 ### Setting up Openedr and File beat
  * openedr is a simple msi installer most of the current windows machines are capable you can use the installer and its own instructions.
@@ -387,7 +386,6 @@ The Operator field can be one of the following:
 When an event is captured, the conditions in the adaptive events are checked sequentially. When a matching condition is found, the BaseEventType and EventType in that adaptive event are added to the event data and the event is sent. Other conditions are not checked. No logging will be done if no advanced event conditions match. If the Condition field is not provided, it is assumed that the condition matches.
 
 
-7. [Setting Up Kibana](getting-started/SettingKibana.md)
 
 ### Setting Up Kibana
 
