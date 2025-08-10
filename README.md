@@ -161,7 +161,7 @@ As a default You should have these libraries in you Visual Studio 2019 but these
  * You can get the pre-configured package at https://github.com/deviantony/docker-elk
     also, you can configure your system defaults also work but less securely please check  https://github.com/deviantony/docker-elk/blob/main/README.md for further information on configuration details
 
- ![git clone](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/git-clone-elk.png)
+ ![git clone](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/git-clone-elk.png)
 
    Clone or download the repository
    Open Terminal inside repo and run
@@ -170,7 +170,7 @@ $ sudo docker-compose up -d
 ```
    -d is for running at the background and if permissions are asked please re-run with sudo privileges
 
- ![Docker compose up](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/docker-compose-allup.png)
+ ![Docker compose up](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/docker-compose-allup.png)
 
    You should be able to see docker containers.
     
@@ -178,7 +178,7 @@ check with
 ```console
 sudo docker ps
 ```
-![Docker ps](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/docker-ps-list.png)
+![Docker ps](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/docker-ps-list.png)
 
    keep in mind kibana is the log ui in this setup  we gonna use kibanas port later on
     by now your monitoring tools are up and running
@@ -200,7 +200,7 @@ sudo docker ps
 ```console
 .\filebeat.exe modules enable logstash --path.config"C:\ProgramData\Elastic\Beats\filebeat"
 ```
-![Filebeat module](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/filebeat-enable-module-logstash.png)
+![Filebeat module](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/filebeat-enable-module-logstash.png)
 
 This command will enable logstash feature and choose your configuration path
 
@@ -238,9 +238,9 @@ setup.kibana:
     output.logstash:
      hosts: ["Your docker adress:5044"]
 ```
-![filebeat config](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/filebeatinputs-filebeatyaml.png)
-![filebeat config](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/filebeatmodules-filebeatyaml.png)
-![filebeat config](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/logstashconfig-filebeatyml.png)
+![filebeat config](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/filebeatinputs-filebeatyaml.png)
+![filebeat config](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/filebeatmodules-filebeatyaml.png)
+![filebeat config](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/logstashconfig-filebeatyml.png)
 
 * Now we have to configure activated logstash on filebeat go to  C:\ProgramData\Elastic\Beats\filebeat\modules.d\
     You can check out logstash.yaml and edit accourding to your needs and configuration.
@@ -259,17 +259,17 @@ module: logstash
   slowlog:
     enabled: false
 ```
- ![Logstash Config](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/logstash-yaml.png)
+ ![Logstash Config](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/logstash-yaml.png)
 
  as for the final step to run filebeat with these configurations please restart the filebeat service from your services.msc
  or run this command from your Powershell as an administrator
 
-![Services msc](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/services-filebeat-restart.png)
+![Services msc](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/services-filebeat-restart.png)
 
  ```console
     Restart-Service -Force filebeat
  ```
- ![Powershell Services](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/filebeat-service-restart.png)
+ ![Powershell Services](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/filebeat-service-restart.png)
 
 
 6. [Editing Alerting Policies](getting-started/EditingAlertingPolicies.md)
@@ -394,27 +394,27 @@ When an event is captured, the conditions in the adaptive events are checked seq
  Kibana is Uİ based Monitoring system. The logstash and elasticsearch environment can handle most of the logging systems such as openedr
 
 >First set up logstash in kibana
- ![Welcome message](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui1.png)
+ ![Welcome message](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui1.png)
 
  >Within browse integrations you can find logstash right away
- ![finding logstsash](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui2.png)
+ ![finding logstsash](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui2.png)
 
  > We have already managed Filebeat configurations so you may just scroll down and go to logstash logs
- ![Logstash logs](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui3.png)
+ ![Logstash logs](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui3.png)
 
  > Create data View to see logs and outputs
- ![Data view](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui4.png)
+ ![Data view](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui4.png)
 
  > Check Log stream names and include index patterns like or just as coming indexes
- ![index pattern](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui5.png)
+ ![index pattern](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui5.png)
 
  > Create a new Dashboard Configure for your requirements with coming filed abd graphs and example of time and log count
- ![Dashboard config](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui6.png)
+ ![Dashboard config](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui6.png)
 
   You can create more dash boards as you like
     
  > You can find your metrics with in dashboard 
- ![Metrics](https://github.com/ComodoSecurity/openedr/blob/main/docs/screenshots/elastic%20ui7.png)
+ ![Metrics](https://github.com/Edrplatform/Rasheed/blob/main/screenshots/elastic%20ui7.png)
 
  
  # Releases
