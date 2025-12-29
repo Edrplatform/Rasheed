@@ -116,9 +116,9 @@ $RECYCLE.BIN/
 ## Application-specific
 *.jsonl
 #Config/agent_config.json
-sysmon_events.jsonl
+events.jsonl
 *_events_normalized_ecs.jsonl
-B_events_normalized_ecs.jsonl
+events_normalized_ecs.jsonl
 
 ## Temporary files
 *.swp

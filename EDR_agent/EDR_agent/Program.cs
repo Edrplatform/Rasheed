@@ -33,9 +33,9 @@ namespace EDR_agent
 
             // 3- Define input & output file paths
 
-            var inputFilePath = Path.Combine(agentFolderPath, "sysmon_events.jsonl");
+            var inputFilePath = Path.Combine(agentFolderPath, "events.jsonl");
 
-            var outputFilePath = Path.Combine(agentFolderPath, "B_events_normalized_ecs.jsonl");
+            var outputFilePath = Path.Combine(agentFolderPath, "events_normalized_ecs.jsonl");
 
 
             Console.WriteLine("Sysmon input file path: " + inputFilePath);

@@ -52,7 +52,7 @@ EDR_agent.exe
 # أو
 EDR_agent.exe --normalize
 ```
-يقرأ من ملف `sysmon_events.jsonl` ويحوله إلى تنسيق ECS.
+يقرأ من ملف `events.jsonl` ويحوله إلى تنسيق ECS.
 
 **2. وضع الجمع فقط (collect)**
 ```bash

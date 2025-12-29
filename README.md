@@ -132,7 +132,7 @@ EDR_agent.exe --collect
 
 سيقوم النظام بقراءة الأحداث من Windows Event Log وحفظها في:
 ```
-%APPDATA%\EDRAgent\sysmon_events.jsonl
+%APPDATA%\EDRAgent\events.jsonl
 ```
 
 ### مثال 2: تطبيع الأحداث الموجودة
@@ -142,9 +142,9 @@ EDR_agent.exe --collect
 EDR_agent.exe
 ```
 
-سيقوم النظام بقراءة من `sysmon_events.jsonl` وإنشاء:
+سيقوم النظام بقراءة من `events.jsonl` وإنشاء:
 ```
-%APPDATA%\EDRAgent\B_events_normalized_ecs.jsonl
+%APPDATA%\EDRAgent\events_normalized_ecs.jsonl
 ```
 
 ### مثال 3: وضع متكامل

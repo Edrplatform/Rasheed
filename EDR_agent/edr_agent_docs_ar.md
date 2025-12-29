@@ -992,11 +992,11 @@ public class AgentOptions
 
     [JsonPropertyName("RawFilePath")]
     public string RawFilePath { get; set; } = 
-        "sysmon_events.jsonl";
+        "events.jsonl";
 
     [JsonPropertyName("NormalizedFilePath")]
     public string NormalizedFilePath { get; set; } = 
-        "B_events_normalized_ecs.jsonl";
+        "events_normalized_ecs.jsonl";
 }
 ```
 
@@ -1571,7 +1571,7 @@ EDR_agent.exe
 # Ø£Ùˆ
 EDR_agent.exe --normalize
 ```
-ÙŠÙ‚Ø±Ø£ Ù…Ù† Ù…Ù„Ù `sysmon_events.jsonl` ÙˆÙŠØ­ÙˆÙ„Ù‡ Ø¥Ù„Ù‰ ØªÙ†Ø³ÙŠÙ‚ ECS.
+ÙŠÙ‚Ø±Ø£ Ù…Ù† Ù…Ù„Ù `events.jsonl` ÙˆÙŠØ­ÙˆÙ„Ù‡ Ø¥Ù„Ù‰ ØªÙ†Ø³ÙŠÙ‚ ECS.
 
 **2. ÙˆØ¶Ø¹ Ø§Ù„Ø¬Ù…Ø¹ ÙÙ‚Ø· (collect)**
 ```bash
