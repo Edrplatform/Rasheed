@@ -17,34 +17,32 @@
 
 ## البنية المعمارية
 
-```
-┌─────────────────┐
-│ Windows Event   │
-│ Log (Sysmon)    │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ SysmonCollector │
-│ (XML Parser)    │
-└────┬───────┬────┘
-     │       │
-     ▼       ▼
-┌─────┐   ┌─────┐
-│ Raw │   │Norm │  Channels
-│Chan │   │Chan │  (Bounded)
-└──┬──┘   └──┬──┘
-   │         │
-   ▼         ▼
-┌─────┐   ┌─────────────┐
-│ Raw │   │Normalization│
-│Write│   │Worker Pool  │
-└─────┘   └──────┬──────┘
-                 │
-                 ▼
-          ┌─────────────┐
-          │ ECS Writer  │
-          └─────────────┘
+```mermaid
+graph TD
+    A["Windows Event Log<br/>(Sysmon)"] --> B["SysmonCollector<br/>(XML Parser)"]
+    
+    B --> C["Raw Channel<br/>(Bounded)"]
+    B --> D["Normalize Channel<br/>(Bounded)"]
+    
+    C --> E["Raw Batch Writer"]
+    D --> F["Normalization<br/>Worker Pool"]
+    
+    F --> G["ECS Channel<br/>(Bounded)"]
+    G --> H["Normalized<br/>Batch Writer"]
+    
+    E --> I[("events.jsonl<br/>(Raw Events)")]
+    H --> J[("events_normalized_ecs.jsonl<br/>(ECS Format)")]
+    
+    style A fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style F fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style G fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style H fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style I fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+    style J fill:#e0f2f1,stroke:#004d40,stroke-width:2px
 ```
 
 ## متطلبات النظام
