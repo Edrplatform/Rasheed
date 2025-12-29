@@ -1,0 +1,8 @@
+{
+  "BatchSize": 50,
+  "FlushIntervalMs": 1000,
+  "ChannelCapacity": 1000,
+  "WorkerCount": 4,
+  "RawFilePath": "C:\\Users\\Me\\AppData\\Roaming\\EDRAgent\\sysmon_events.jsonl",
+  "NormalizedFilePath": "C:\\Users\\Me\\AppData\\Roaming\\EDRAgent\\B_events_normalized_ecs.jsonl"
+}
